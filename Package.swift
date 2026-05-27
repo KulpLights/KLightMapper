@@ -6,19 +6,25 @@ import PackageDescription
 // framework. Source lives in the private KLightMapper-src repo;
 // only the prebuilt XCFramework is published here.
 //
-// version:    v1.0.0
-// source sha: 83ad0f9c4177fc12e7f04a09ec7bb7e8b9e4263e
+// version:    v1.1.0
+// source sha: e4f20abe940cd0f0b65b74d7f0e7d99a78a90b9d
 let package = Package(
     name: "KLightMapper",
-    platforms: [.iOS(.v17)],
+    // iOS 17 floor matches the source package. macOS 13 floor lets
+    // the offline analyzer + xmodel writer link on Macs that haven't
+    // upgraded to 14 yet; the scan-capture entry points
+    // ( on macOS) are 
+    // because Continuity Camera + 
+    // both require macOS 14.
+    platforms: [.iOS(.v17), .macOS(.v13)],
     products: [
         .library(name: "KLightMapper", targets: ["KLightMapper"]),
     ],
     targets: [
         .binaryTarget(
             name: "KLightMapper",
-            url: "https://github.com/KulpLights/KLightMapper/releases/download/v1.0.0/KLightMapper.xcframework.zip",
-            checksum: "530d144339f2e22464b96e56e03d4a39fa730f5dd8c89df51a9af549f55cd17f"
+            url: "https://github.com/KulpLights/KLightMapper/releases/download/v1.1.0/KLightMapper.xcframework.zip",
+            checksum: "f71bb8a25c42b8481d825c2a2d3fb2d32b5accbd80b33705208ed9c6d9a0e26a"
         ),
     ]
 )
