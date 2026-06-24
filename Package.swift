@@ -6,8 +6,8 @@ import PackageDescription
 // framework. Source lives in the private KLightMapper-src repo;
 // only the prebuilt XCFramework is published here.
 //
-// version:    v1.2.0
-// source sha: 4e8dd3d79d4c85ff1c017c633df3f1accfb9289b
+// version:    v1.3.0
+// source sha: 200028c8494d7e45eae2a9259975cefe0f6bb333
 let package = Package(
     name: "KLightMapper",
     // iOS 17 floor matches the source package. macOS 13 floor lets
@@ -23,8 +23,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "KLightMapper",
-            url: "https://github.com/KulpLights/KLightMapper/releases/download/v1.2.0/KLightMapper.xcframework.zip",
-            checksum: "8739d2d7f72015b7d191038799c11a2b5c5daa8d80b89c72838a1829f604d459"
+            url: "https://github.com/KulpLights/KLightMapper/releases/download/v1.3.0/KLightMapper.xcframework.zip",
+            checksum: "1f3fa82486ff060d32329df800a85c6e3858b1dd554edddc18adf710d5fafe25"
         ),
     ]
 )
